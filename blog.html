@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Blog & Berita Wisata | Travora</title>
+    <meta name="description" content="Kumpulan artikel, tips, dan rekomendasi wisata alam serta eco-tourism terbaik di Kota Batu, Jawa Timur bersama Travora Travel.">
+    <meta name="keywords" content="blog wisata batu, wisata alam batu, eco-tourism jawa timur, tips liburan batu">
+    <link rel="canonical" href="https://www.travora-batu.com/blog.html">
+    
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/leaf.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://img.icons8.com/color/180/000000/leaf.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === STRUKTUR ASLI (TIDAK DIUBAH) === */
+        html, body { overflow-x: hidden; width: 100%; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        :root { --primary-green: #2e8b57; --dark-black: #121212; --light-green: #3cb371; }
+        .navbar { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar-brand { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.8rem; color: var(--primary-green) !important; letter-spacing: 1px; }
+        .nav-link { font-weight: 600; color: var(--dark-black) !important; transition: color 0.3s; }
+        .nav-link:hover, .nav-link.active { color: var(--primary-green) !important; }
+        
+        /* HEADER PAGE */
+        .page-header { background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/blog.webp') center center/cover no-repeat; padding: 160px 0 80px; text-align: center; color: white; }
+        .page-header h1 { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 3rem; text-transform: uppercase; }
+        
+        /* KARTU BLOG */
+        .blog-card { border: none; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s; height: 100%; }
+        .blog-card:hover { transform: translateY(-5px); }
+        .blog-card img { height: 200px; object-fit: cover; }
+        .blog-date { color: var(--primary-green); font-size: 0.85rem; font-weight: 600; }
+
+        /* FOOTER & CTA & FLOATING (ASLI) */
+        .cta-section { background-color: var(--primary-green); color: white; padding: 60px 0; }
+        .footer { background-color: var(--dark-black); color: #d1d1d1; padding: 60px 0 30px; }
+        .footer h5 { color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; margin-bottom: 20px; }
+        .footer a { color: #d1d1d1; text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: var(--primary-green); }
+        .float-wa { position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 1000; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.3s; }
+        .float-wa:hover { transform: scale(1.1); color: white; }
+        .float-top { position: fixed; width: 45px; height: 45px; bottom: 90px; right: 27px; background-color: var(--dark-black); color: white; border: none; border-radius: 5px; text-align: center; font-size: 20px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 999; cursor: pointer; display: none; transition: background-color 0.3s; }
+        .float-top:hover { background-color: var(--primary-green); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">TRAVORA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target" aria-controls="navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Blog Travora</h1>
+            <p class="lead mt-3">Inspirasi dan panduan liburan terbaik di Kota Batu</p>
+        </div>
+    </header>
+
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card">
+                        <img src="img/blog1.webp" class="card-img-top" alt="Wisata Alam Batu" loading="lazy">
+                        <div class="card-body p-4">
+                            <p class="blog-date"><i class="far fa-calendar-alt me-2"></i> 20 Mei 2026</p>
+                            <h4 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">5 Wisata Alam Terbaik di Kota Batu</h4>
+                            <p class="card-text text-muted">Jelajahi keindahan alam Kota Batu yang belum banyak diketahui orang. Dari air terjun hingga puncaknya yang sejuk.</p>
+                            <a href="wisata-alam-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card">
+                        <img src="img/blog2.webp" class="card-img-top" alt="Villa Keluarga Batu" loading="lazy">
+                        <div class="card-body p-4">
+                            <p class="blog-date"><i class="far fa-calendar-alt me-2"></i> 18 Mei 2026</p>
+                            <h4 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Rekomendasi Villa Ramah Keluarga</h4>
+                            <p class="card-text text-muted">Mencari penginapan untuk keluarga besar? Berikut daftar villa terbaik di Batu dengan fasilitas super lengkap.</p>
+                            <a href="villa-keluarga-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card">
+                        <img src="img/blog3.webp" class="card-img-top" alt="Tips Liburan Hemat" loading="lazy">
+                        <div class="card-body p-4">
+                            <p class="blog-date"><i class="far fa-calendar-alt me-2"></i> 15 Mei 2026</p>
+                            <h4 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Tips Liburan Hemat Eco-Tourism</h4>
+                            <p class="card-text text-muted">Bagaimana cara menikmati alam Batu tanpa membuat dompet menipis? Simak panduan dan tips rahasia berikut ini.</p>
+                            <a href="tips-liburan-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section text-center">
+        <div class="container">
+            <h2 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Siap Menjelajahi Keindahan Kota Batu?</h2>
+            <p class="mb-4">Dapatkan penawaran paket wisata terbaik dan diskon khusus untuk pemesanan hari ini.</p>
+            <a href="contact.html" class="btn btn-dark btn-lg" style="border-radius: 4px;">Hubungi Kami Sekarang</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 pe-lg-5">
+                    <h5 class="text-white" style="color: var(--primary-green) !important;">TRAVORA</h5>
+                    <p>Partner perjalanan terbaik Anda untuk mengeksplorasi wisata alam dan eco-tourism di Kota Batu, Jawa Timur.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Layanan Utama</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#layanan">Paket Wisata Alam</a></li>
+                        <li class="mb-2"><a href="index.html#layanan">Outbound & Gathering</a></li>
+                        <li class="mb-2"><a href="index.html#layanan">Sewa Transportasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Hubungi Kami</h5>
+                    <p><i class="fas fa-map-marker-alt me-2 text-success"></i> Jl. Sudirman, Batu</p>
+                    <p><i class="fas fa-phone me-2 text-success"></i> +62 812 3456 7890</p>
+                    <p><i class="fas fa-envelope me-2 text-success"></i> info@travora-batu.com</p>
+                </div>
+            </div>
+            <hr style="border-color: #333;">
+            <div class="text-center mt-3"><p class="mb-0">&copy; 2026 Travora Travel. All Rights.</p></div>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" class="float-top" title="Kembali ke atas"><i class="fas fa-arrow-up"></i></button>
+    <a href="https://wa.me/6281234567890" class="float-wa" target="_blank" title="Hubungi via WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let mybutton = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { mybutton.style.display = "block"; } else { mybutton.style.display = "none"; }
+        };
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    </script>
+</body>
+</html>

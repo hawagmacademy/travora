@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travora | Jelajahi Keindahan Kota Batu</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === RESET & BASE STYLES === */
+        html, body {
+            overflow-x: hidden; /* Mencegah goyang kanan-kiri */
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* === COLOR VARIABLES === */
+        :root {
+            --primary-green: #2e8b57; /* Sea Green (Eco-tourism) */
+            --dark-black: #121212;
+            --light-green: #3cb371;
+        }
+
+        /* === NAVBAR === */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--primary-green) !important;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: var(--dark-black) !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--primary-green) !important;
+        }
+
+        /* === HERO SECTION === */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?q=80&w=1920&auto=format&fit=crop') center center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-top: 80px; /* Offset for navbar */
+        }
+        .hero-price {
+            display: inline-block;
+            background: white;
+            color: var(--primary-green);
+            padding: 5px 20px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+        .btn-custom {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 12px 30px;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: var(--light-green);
+            color: white;
+        }
+
+        /* === CTA SECTION === */
+        .cta-section {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 60px 0;
+        }
+
+        /* === FOOTER === */
+        .footer {
+            background-color: var(--dark-black);
+            color: #d1d1d1;
+            padding: 60px 0 30px;
+        }
+        .footer h5 {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .footer a {
+            color: #d1d1d1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: var(--primary-green);
+        }
+
+        /* === FLOATING BUTTONS === */
+        .float-wa {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        .float-wa:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .float-top {
+            position: fixed;
+            width: 45px;
+            height: 45px;
+            bottom: 90px; /* Diletakkan di atas WA */
+            right: 27px;
+            background-color: var(--dark-black);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 999;
+            cursor: pointer;
+            display: none; /* Disembunyikan secara default */
+            transition: background-color 0.3s;
+        }
+        .float-top:hover {
+            background-color: var(--primary-green);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">TRAVORA</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="hero-price">Mulai dari Rp 499.000</div>
+                    <p class="lead mb-1">Cari Liburan Impian Anda Selanjutnya</p>
+                    <h1 class="hero-title mb-4">EKSPLORASI ALAM<br>KOTA BATU</h1>
+                    <p class="mb-5">Jelajahi keindahan destinasi wisata alam, pegunungan sejuk, dan eco-tourism terbaik di Kota Batu, Jawa Timur bersama Travora.</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-custom">PESAN SEKARANG <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center py-5">
+            <h2 class="mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Mengapa Memilih Travora?</h2>
+            <p class="lead text-muted">Kami menawarkan pengalaman wisata alam dan eco-tourism terbaik di Kota Batu dengan pelayanan profesional dan terpercaya.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white" id="tentang-kami">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="img/tentang (2).webp" alt="Tentang Travora" class="img-fluid rounded shadow" style="width: 80%; display: block; margin: 0 auto;">
+                </div>
+                <div class="col-lg-6 px-lg-5">
+                    <h2 class="mb-4" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Tentang <span style="color: var(--primary-green);">Travora</span></h2>
+                    <p class="text-muted" style="line-height: 1.8;">Travora adalah agen perjalanan wisata lokal yang berdedikasi untuk mengenalkan pesona alam Kota Batu, Jawa Timur kepada para wisatawan. Dengan mengusung konsep <strong>eco-tourism</strong>, kami berkomitmen untuk memberikan pengalaman liburan yang menyatu dengan alam sekaligus menjaga kelestarian lingkungan sekitar.</p>
+                    <p class="text-muted" style="line-height: 1.8;">Bersama tim profesional yang telah menguasai setiap sudut destinasi di Kota Batu, kami siap memastikan perjalanan liburan Anda aman, nyaman, dan menjadi memori yang tak terlupakan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f8f9fa;" id="layanan">
+        <div class="container py-4 text-center">
+            <h2 class="mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Layanan <span style="color: var(--primary-green);">Kami</span></h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center" style="border-radius: 10px;">
+                        <div class="card-body">
+                            <i class="fas fa-leaf fa-3x mb-4" style="color: var(--primary-green);"></i>
+                            <h4 class="card-title fw-bold mb-3">Wisata Alam</h4>
+                            <p class="card-text text-muted">Eksplorasi destinasi alam terbaik di Kota Batu, mulai dari wisata petik apel, air terjun eksotis, hingga pegunungan yang sejuk.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center" style="border-radius: 10px;">
+                        <div class="card-body">
+                            <i class="fas fa-users fa-3x mb-4" style="color: var(--primary-green);"></i>
+                            <h4 class="card-title fw-bold mb-3">Outbound & Gathering</h4>
+                            <p class="card-text text-muted">Paket spesial untuk keluarga, perusahaan, atau instansi yang mencari kegiatan seru, team building, dan kebersamaan di alam terbuka.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center" style="border-radius: 10px;">
+                        <div class="card-body">
+                            <i class="fas fa-bus fa-3x mb-4" style="color: var(--primary-green);"></i>
+                            <h4 class="card-title fw-bold mb-3">Sewa Transportasi</h4>
+                            <p class="card-text text-muted">Penyediaan armada transportasi darat yang bersih, nyaman, dan aman untuk memfasilitasi perjalanan wisata Anda selama di Kota Batu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white" id="faq">
+        <div class="container py-4">
+            <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Pertanyaan yang Sering Diajukan (<span style="color: var(--primary-green);">FAQ</span>)</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="accordionFAQ">
+                        <div class="accordion-item mb-3 border border-light shadow-sm" style="border-radius: 8px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    1. Apa saja destinasi wisata di Kota Batu yang dikunjungi?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Kami melayani berbagai destinasi unggulan berkonsep alam di Kota Batu, seperti Coban Rais, Coban Talun, Taman Langit Gunung Banyak, Selecta, hingga wisata agro petik apel langsung dari kebunnya. Anda juga bisa *request* destinasi di luar daftar standar kami.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border border-light shadow-sm" style="border-radius: 8px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    2. Bagaimana cara memesan paket wisata di Travora?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Sangat mudah! Anda dapat langsung menekan tombol "Hubungi Kami" pada menu atau mengklik ikon WhatsApp yang melayang di pojok kanan bawah layar. Tim admin kami akan segera membalas dan membantu menyesuaikan jadwal perjalanan Anda.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border border-light shadow-sm" style="border-radius: 8px; overflow: hidden;">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    3. Apakah harga paket sudah termasuk penginapan dan makan?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                <div class="accordion-body text-muted">
+                                    Ya, kami menyediakan opsi paket "All-in-One" yang sudah mencakup transportasi lokal, tiket masuk tempat wisata, penginapan (villa/hotel berbintang), serta konsumsi harian. Kami juga melayani paket *custom* yang bisa disesuaikan dengan *budget* Anda.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section text-center">
+        <div class="container">
+            <h2 class="mb-3" style="font-family: 'Montserrat', sans-serif; font-weight: 700;">Siap Menjelajahi Keindahan Kota Batu?</h2>
+            <p class="mb-4">Dapatkan penawaran paket wisata terbaik dan diskon khusus untuk pemesanan hari ini.</p>
+            <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-dark btn-lg" style="border-radius: 4px;">Hubungi Kami Sekarang</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 pe-lg-5">
+                    <h5 class="text-white" style="color: var(--primary-green) !important;">TRAVORA</h5>
+                    <p>Partner perjalanan terbaik Anda untuk mengeksplorasi wisata alam dan eco-tourism di Kota Batu, Jawa Timur. Kami memastikan liburan Anda berkesan dan menyatu dengan alam.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Home</a></li>
+                        <li class="mb-2"><a href="about.html"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> About Us</a></li>
+                        <li class="mb-2"><a href="blog.html"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Blog Pariwisata</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Layanan Utama</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Paket Wisata Alam</a></li>
+                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Outbound & Gathering</a></li>
+                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Sewa Transportasi</a></li>
+                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Reservasi Hotel</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Hubungi Kami</h5>
+                    <p><i class="fas fa-map-marker-alt me-2 text-success"></i> Jl. Panglima Sudirman, Kota Batu, Jawa Timur</p>
+                    <p><i class="fas fa-phone me-2 text-success"></i> +62 812 3456 7890</p>
+                    <p><i class="fas fa-envelope me-2 text-success"></i> info@travora-batu.com</p>
+                </div>
+            </div>
+            <hr style="border-color: #333;">
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2026 Travora Travel. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" class="float-top" title="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <a href="https://wa.me/6281234567890" class="float-wa" target="_blank" title="Hubungi via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Mengambil elemen tombol
+        let mybutton = document.getElementById("scrollTopBtn");
+
+        // Ketika user melakukan scroll ke bawah 100px dari atas dokumen, tampilkan tombol
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Ketika tombol diklik, scroll ke atas dokumen secara halus (smooth)
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
