@@ -88,6 +88,19 @@
             color: white;
         }
 
+        /* === ARTIKEL SECTION STYLE === */
+        .blog-card { 
+            border: none; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            transition: transform 0.3s; 
+            height: 100%; 
+        }
+        .blog-card:hover { transform: translateY(-5px); }
+        .blog-card img { height: 200px; object-fit: cover; }
+        .blog-date { color: var(--primary-green); font-size: 0.85rem; font-weight: 600; }
+
         /* === CTA SECTION === */
         .cta-section {
             background-color: var(--primary-green);
@@ -177,7 +190,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">TRAVORA</a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="target" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -309,6 +322,47 @@
                                     Ya, kami menyediakan opsi paket "All-in-One" yang sudah mencakup transportasi lokal, tiket masuk tempat wisata, penginapan (villa/hotel berbintang), serta konsumsi harian. Kami juga melayani paket *custom* yang bisa disesuaikan dengan *budget* Anda.
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Artikel <span style="color: var(--primary-green);">Wisata</span></h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card">
+                        <img src="img/blog1.webp" class="card-img-top" alt="Wisata Alam Batu" loading="lazy">
+                        <div class="card-body p-4">
+                            <p class="blog-date"><i class="far fa-calendar-alt me-2"></i> 20 Mei 2026</p>
+                            <h4 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">5 Wisata Alam Terbaik di Kota Batu</h4>
+                            <p class="card-text text-muted">Jelajahi keindahan alam Kota Batu yang belum banyak diketahui orang. Dari air terjun hingga puncaknya yang sejuk.</p>
+                            <a href="wisata-alam-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card">
+                        <img src="img/blog2.webp" class="card-img-top" alt="Villa Keluarga Batu" loading="lazy">
+                        <div class="card-body p-4">
+                            <p class="blog-date"><i class="far fa-calendar-alt me-2"></i> 18 Mei 2026</p>
+                            <h4 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Rekomendasi Villa Ramah Keluarga</h4>
+                            <p class="card-text text-muted">Mencari penginapan untuk keluarga besar? Berikut daftar villa terbaik di Batu dengan fasilitas super lengkap.</p>
+                            <a href="villa-keluarga-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card blog-card">
+                        <img src="img/blog3.webp" class="card-img-top" alt="Tips Liburan Hemat" loading="lazy">
+                        <div class="card-body p-4">
+                            <p class="blog-date"><i class="far fa-calendar-alt me-2"></i> 15 Mei 2026</p>
+                            <h4 class="card-title fw-bold" style="font-family: 'Montserrat', sans-serif;">Tips Liburan Hemat Eco-Tourism</h4>
+                            <p class="card-text text-muted">Bagaimana cara menikmati alam Batu tanpa membuat dompet menipis? Simak panduan dan tips rahasia berikut ini.</p>
+                            <a href="tips-liburan-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
