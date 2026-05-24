@@ -97,9 +97,9 @@
         .author-box img { 
             width: 90px; 
             height: 90px; 
-            min-width: 90px; 
-            min-height: 90px; 
-            flex-shrink: 0;  
+            min-width: 90px; /* Cegah penyusutan jadi oval */
+            min-height: 90px; /* Cegah penyusutan jadi oval */
+            flex-shrink: 0;  /* Memaksa flexbox agar tidak mengecilkan gambar */
             border-radius: 50%; 
             object-fit: cover; 
             margin-right: 20px; 
@@ -109,13 +109,13 @@
         /* Responsif untuk Author Box di Layar Mobile (Rata Tengah & Foto di Atas) */
         @media (max-width: 768px) {
             .author-box {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: column; /* Ubah susunan menjadi atas-bawah */
+                text-align: center;     /* Jadikan teks rata tengah */
                 justify-content: center;
             }
             .author-box img {
-                margin-right: 0;
-                margin-bottom: 15px;
+                margin-right: 0;       /* Hapus jarak kanan */
+                margin-bottom: 15px;   /* Tambah jarak bawah ke teks */
             }
         }
         
@@ -127,8 +127,7 @@
         .btn-wa { background-color: #25d366; }
     </style>
 </head>
-<body style="padding-top: 100px;">
-
+<body style="padding-top: 100px;"> 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">TRAVORA</a>
@@ -270,6 +269,8 @@
                         <img src="img/blog1.webp" class="card-img-top" alt="Wisata Alam" loading="lazy" style="height: 200px; object-fit: cover;">
                         <div class="card-body p-4">
                             <h5 class="fw-bold"><a href="wisata-alam-batu.html" class="text-dark text-decoration-none">5 Wisata Alam Terbaik di Kota Batu (Update 2026)</a></h5>
+                            <p class="card-text text-muted mt-2">Jelajahi keindahan alam Kota Batu yang belum banyak diketahui orang. Dari air terjun hingga puncaknya yang sejuk.</p>
+                            <a href="wisata-alam-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -278,6 +279,8 @@
                         <img src="img/blog3.webp" class="card-img-top" alt="Tips Liburan" loading="lazy" style="height: 200px; object-fit: cover;">
                         <div class="card-body p-4">
                             <h5 class="fw-bold"><a href="tips-liburan-batu.html" class="text-dark text-decoration-none">Tips Liburan Hemat Eco-Tourism di Kota Batu</a></h5>
+                            <p class="card-text text-muted mt-2">Bagaimana cara menikmati alam Batu tanpa membuat dompet menipis? Simak panduan dan tips rahasia berikut ini.</p>
+                            <a href="tips-liburan-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -286,6 +289,8 @@
                         <img src="img/blog2(2).webp" class="card-img-top" alt="Oleh-oleh" loading="lazy" style="height: 200px; object-fit: cover;">
                         <div class="card-body p-4">
                             <h5 class="fw-bold"><a href="villa-keluarga-batu.html" class="text-dark text-decoration-none">Rekomendasi Villa Ramah Keluarga dengan Private Pool di Batu</a></h5>
+                            <p class="card-text text-muted mt-2">Dapatkan pengalaman menginap terbaik untuk keluarga besar Anda di villa dengan fasilitas lengkap di Batu.</p>
+                            <a href="villa-keluarga-batu.html" class="btn btn-outline-success mt-2">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>

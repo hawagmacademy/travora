@@ -101,6 +101,23 @@
         .blog-card img { height: 200px; object-fit: cover; }
         .blog-date { color: var(--primary-green); font-size: 0.85rem; font-weight: 600; }
 
+        /* === GALLERY SECTION STYLE (BARU) === */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
         /* === CTA SECTION === */
         .cta-section {
             background-color: var(--primary-green);
@@ -281,7 +298,79 @@
         </div>
     </section>
 
-    <section class="py-5 bg-white" id="faq">
+    <section class="py-5 bg-white" id="galeri">
+        <div class="container py-4 text-center">
+            <h2 class="mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Galeri <span style="color: var(--primary-green);">Wisata</span></h2>
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modalGaleri1">
+                        <img src="img/galeri1.webp" alt="Pemandangan Alam Batu" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modalGaleri2">
+                        <img src="img/galeri2.webp" alt="Pegunungan Sejuk" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#modalGaleri3">
+                        <img src="img/galeri3.webp" alt="Villa Keluarga" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modalGaleri1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center pb-4">
+                    <img src="img/galeri1.webp" class="img-fluid rounded mb-3 w-100" alt="Pemandangan Alam Batu">
+                    <h5 class="fw-bold" style="color: var(--dark-black);">Hutan Pinus Asri</h5>
+                    <p class="text-muted">Kawasan wisata yang menenangkan dengan rimbunnya pepohonan pinus dan udara yang sangat sejuk.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalGaleri2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center pb-4">
+                    <img src="img/galeri2.webp" class="img-fluid rounded mb-3 w-100" alt="Pegunungan Sejuk">
+                    <h5 class="fw-bold" style="color: var(--dark-black);">Keindahan Perbukitan Batu</h5>
+                    <p class="text-muted">Lanskap perbukitan hijau khas Kota Batu yang memanjakan mata, cocok untuk eco-tourism.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalGaleri3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                </div>
+                <div class="modal-body text-center pb-4">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=800&auto=format&fit=crop" class="img-fluid rounded mb-3 w-100" alt="Villa Keluarga">
+                    <h5 class="fw-bold" style="color: var(--dark-black);">Penginapan Nyaman</h5>
+                    <p class="text-muted">Tersedia banyak pilihan villa dengan private pool yang sangat direkomendasikan untuk keluarga.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5" style="background-color: #f8f9fa;" id="faq">
         <div class="container py-4">
             <h2 class="text-center mb-5" style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--dark-black);">Pertanyaan yang Sering Diajukan (<span style="color: var(--primary-green);">FAQ</span>)</h2>
             <div class="row justify-content-center">
@@ -396,30 +485,27 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Layanan Utama</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Paket Wisata Alam</a></li>
-                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Outbound & Gathering</a></li>
-                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Sewa Transportasi</a></li>
-                        <li class="mb-2"><a href="#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Reservasi Hotel</a></li>
+                        <li class="mb-2"><a href="index.html#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Paket Wisata Alam</a></li>
+                        <li class="mb-2"><a href="index.html#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Outbound & Gathering</a></li>
+                        <li class="mb-2"><a href="index.html#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Sewa Transportasi</a></li>
+                        <li class="mb-2"><a href="index.html#layanan"><i class="fas fa-chevron-right me-2" style="font-size: 12px;"></i> Reservasi Hotel</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4">
                     <h5>Hubungi Kami</h5>
-                    <p><i class="fas fa-map-marker-alt me-2 text-success"></i> Jl. Panglima Sudirman, Kota Batu, Jawa Timur</p>
+                    <p><i class="fas fa-map-marker-alt me-2 text-success"></i> Jl. Panglima Sudirman, Kota Batu</p>
                     <p><i class="fas fa-phone me-2 text-success"></i> +62 812 3456 7890</p>
                     <p><i class="fas fa-envelope me-2 text-success"></i> info@travora-batu.com</p>
                 </div>
             </div>
             <hr style="border-color: #333;">
-            <div class="text-center mt-3">
-                <p class="mb-0">&copy; 2026 Travora Travel. All Rights Reserved.</p>
-            </div>
+            <div class="text-center mt-3"><p class="mb-0">&copy; 2026 Travora Travel. All Rights Reserved.</p></div>
         </div>
     </footer>
 
     <button onclick="scrollToTop()" id="scrollTopBtn" class="float-top" title="Kembali ke atas">
         <i class="fas fa-arrow-up"></i>
     </button>
-
     <a href="https://wa.me/6281234567890" class="float-wa" target="_blank" title="Hubungi via WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -427,12 +513,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        // Mengambil elemen tombol
         let mybutton = document.getElementById("scrollTopBtn");
-
-        // Ketika user melakukan scroll ke bawah 100px dari atas dokumen, tampilkan tombol
-        window.onscroll = function() {scrollFunction()};
-
+        
+        window.onscroll = function() { scrollFunction() };
+        
         function scrollFunction() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                 mybutton.style.display = "block";
@@ -440,13 +524,9 @@
                 mybutton.style.display = "none";
             }
         }
-
-        // Ketika tombol diklik, scroll ke atas dokumen secara halus (smooth)
+        
         function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
